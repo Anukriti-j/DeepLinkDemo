@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct DeepLinkDemoApp: App {
+    @StateObject private var sessionManager = SessionManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView(session: sessionManager)
         }
     }
 }
